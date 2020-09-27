@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+header {
+  background-image: url(headphones.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+header * {
+  z-index: 1;
+}
+span.title {
+  color: steelblue;
+}
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 10px;
+}
+form {
+  position: relative;
+  margin-top: 20px;
+  width: 500px;
+  max-width: 100%;
+}
+form input {
+  border: 0;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 15px 20px;
+  width: 100%;
+}
+.show {
+  animation: backgroundChange 0.5s;
+}
+@keyframes backgroundChange {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: white;
+  }
+}
+small {
+  display: none;
+}
+small.show {
+  display: block;
+  color: red;
+  text-transform: bold;
+  font-size: 0.9rem;
+}
+form button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: steelblue;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  padding: 13px 30px;
+}
+.btn {
+  background-color: steelblue;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 10px;
+}
+
+ul.songs {
+  list-style-type: none;
+  padding: 0;
+}
+ul.songs li {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+.container {
+  margin: 30px auto;
+  max-width: 100%;
+  width: 750px;
+}
+.container h2 {
+  font-weight: 300;
+}
+
+.container p {
+  text-align: center;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+}
+.centered button {
+  transform: scale(1.3);
+  margin: 15px;
+}
